@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ GILBERT | OFFICIAL MUSIC BLOG</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #ff0000;
+            --secondary: #ffd700;
+            --dark: #0f0c29;
+        }
+
+        /* FICHA GOOGLE BAR */
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
+        #google_translate_element { display: none; }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); 
+            color: #fff; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* VIUREMBI VYA MUZIKI */
+        .music-note {
+            position: absolute;
+            color: rgba(255, 215, 0, 0.2);
+            font-size: 24px;
+            z-index: -1;
+            animation: float 10s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+
+        .marquee-top {
+            background: var(--primary);
+            color: white;
+            padding: 10px 0;
+            width: 100%;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            border-bottom: 3px solid var(--secondary);
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+        }
+
+        .navbar { 
+            background: rgba(0, 0, 0, 0.85); 
+            backdrop-filter: blur(15px);
+            padding: 15px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .navbar a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            padding: 10px 15px; 
+            font-size: 12px; 
+            font-weight: bold; 
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        /* DROPDOWN LUGHA */
+        .dropdown { position: relative; display: inline-block; }
+        .dropbtn {
+            background: none;
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+            padding: 7px 15px;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-left: 10px;
+            text-transform: uppercase;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+            z-index: 1;
+            border-radius: 10px;
+            border: 1px solid var(--secondary);
+            right: 0;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .dropdown-content a:hover { background: var(--primary); }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        .welcome-text { 
+            margin: 50px 0 20px; 
+            font-weight: 900; 
+            font-size: 32px; 
+            color: #fff;
+            text-align: center;
+            text-shadow: 0 0 20px var(--primary);
+        }
+
+        .profile-card { 
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            width: 280px; 
+            padding: 40px 20px; 
+            border-radius: 25px; 
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.2); 
+            border: 2px solid rgba(255, 215, 0, 0.5);
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .profile-card img { 
+            width: 160px; 
+            height: 160px; 
+            border-radius: 50%; 
+            border: 5px solid var(--secondary); 
+            object-fit: cover;
+            box-shadow: 0 0 25px var(--secondary);
+        }
+
+        /* FOOTER ILIYOBORESHWA */
+        footer { 
+            background: #000; 
+            color: #fff; 
+            padding: 50px 20px; 
+            width: 100%; 
+            margin-top: auto;
+            border-top: 4px solid var(--primary);
+            text-align: center;
+        }
+
+        .social-icons { margin: 25px 0; }
+        .social-icons a { 
+            color: #fff; 
+            font-size: 30px; 
+            margin: 0 18px; 
+            transition: 0.4s; 
+            text-decoration: none;
+            display: inline-block;
+        }
+        .social-icons a:hover { color: var(--secondary); transform: translateY(-10px); }
+
+        .contact-info p { margin: 8px 0; font-size: 15px; }
+        
+        .btn-contact {
+            display: inline-block;
+            background: #25d366; 
+            color: white;
+            padding: 12px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            transition: 0.3s;
+        }
+        .btn-contact:hover { transform: scale(1.1); }
+    </style>
+</head>
+<body>
+
+    <div id="google_translate_element"></div>
+
+    <div class="music-note" style="left: 15%; animation-delay: 0s;"><i class="fas fa-music"></i></div>
+    <div class="music-note" style="left: 45%; animation-delay: 3s;"><i class="fas fa-headphones"></i></div>
+    <div class="music-note" style="left: 75%; animation-delay: 6s;"><i class="fas fa-compact-disc"></i></div>
+
+    <div class="marquee-top">
+        <marquee scrollamount="8">
+            🔥 KARIBU DJ GILBERT MUSIC BLOG ... PAKUA NYIMBO MPYA KILA SIKU ... @JAY019410 ON TIKTOK ... CALL: 0793770731
+        </marquee>
+    </div>
+
+    <nav class="navbar">
+        <a href="index.html">Nyumbani</a>
+        <a href="singeli.html">Singeli</a>
+        <a href="gospel.html">Gospel</a>
+        <a href="bongo.html">Bongo Flava</a>
+
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fas fa-globe"></i> Language</button>
+            <div class="dropdown-content">
+                <a onclick="changeLanguage('sw')"><img src="https://flagcdn.com/16x12/tz.png" width="16"> Kiswahili</a>
+                <a onclick="changeLanguage('en')"><img src="https://flagcdn.com/16x12/us.png" width="16"> English</a>
+                <a onclick="changeLanguage('fr')"><img src="https://flagcdn.com/16x12/fr.png" width="16"> French</a>
+                <a onclick="changeLanguage('es')"><img src="https://flagcdn.com/16x12/es.png" width="16"> Spanish</a>
+                <a onclick="changeLanguage('zh-CN')"><img src="https://flagcdn.com/16x12/cn.png" width="16"> Chinese</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="welcome-text">DJ GILBERT MUSIC HUB</div>
+
+    <div class="profile-card">
+        <img src="https://i.ibb.co/60RTG2pX/1772103652473.png" alt="DJ Gilbert">
+        <h2 style="color: var(--secondary); margin-top: 15px;">GILBERT PETER MOSHA</h2>
+        <p style="background: var(--primary); padding: 5px 20px; border-radius: 50px; font-size: 14px;">THE MIX MASTER / DJ</p>
+    </div>
+
+    <footer>
+        <div class="contact-info">
+            <h3 style="color: var(--secondary); text-transform: uppercase; letter-spacing: 2px;">WASILIANA NAMI</h3>
+            
+            <div class="social-icons">
+                <a href="https://wa.me/255793770731" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.tiktok.com/@jay019410?_r=1&_t=ZS-94F1lNLxg6X" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="mailto:kingshamo47@gmail.com" title="Email"><i class="far fa-envelope"></i></a>
+            </div>
+
+            <p><strong>Simu:</strong> 0793 770 731</p>
+            <p><strong>Email:</strong> kingshamo47@gmail.com</p>
+            
+            <a href="https://wa.me/255793770731" class="btn-contact">
+                <i class="fab fa-whatsapp"></i> CHAT WHATSAPP
+            </a>
+
+            <hr style="width: 50%; border: 0.5px solid rgba(255,255,255,0.1); margin: 30px auto;">
+            <p style="color: #666; font-size: 11px; text-transform: uppercase;">&copy; 2026 DJ GILBERT MUSIC. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'sw',
+                includedLanguages: 'sw,en,fr,es,zh-CN',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function changeLanguage(langCode) {
+            var select = document.querySelector('select.goog-te-combo');
+            if (select) {
+                select.value = langCode;
+                select.dispatchEvent(new Event('change'));
+            } else {
+                alert("Tafadhali subiri kidogo mfumo upakie...");
+            }
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
