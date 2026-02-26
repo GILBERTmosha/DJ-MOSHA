@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJ GILBERT | OFFICIAL MUSIC BLOG</title>
+    
+    <meta name="description" content="DJ Gilbert Music Blog - Pakua nyimbo mpya za Singeli, Gospel na Bongo Flava. Best mixes by Gilbert Peter Mosha.">
+    <meta name="keywords" content="DJ Gilbert, DJ Gilbert Peter Mosha, Singeli Mpya, Bongo Flava Mix, Tanzania Music Blog">
+    <meta name="author" content="Gilbert Peter Mosha">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         :root {
             --primary: #ff0000;
@@ -12,10 +18,23 @@
             --dark: #0f0c29;
         }
 
-        /* FICHA GOOGLE BAR */
-        .goog-te-banner-frame.skiptranslate { display: none !important; }
-        body { top: 0px !important; }
-        #google_translate_element { display: none; }
+        /* MBINU YA KUFICHA GOOGLE TRANSLATE BAR KABISA */
+        .goog-te-banner-frame.skiptranslate, .goog-te-banner-frame { 
+            display: none !important; 
+        }
+        body { 
+            top: 0px !important; 
+        }
+        .goog-te-balloon-frame { 
+            display: none !important; 
+        }
+        #google_translate_element { 
+            display: none; 
+        }
+        .goog-text-highlight {
+            background: transparent !important;
+            box-shadow: none !important;
+        }
 
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
@@ -149,7 +168,6 @@
             box-shadow: 0 0 25px var(--secondary);
         }
 
-        /* FOOTER ILIYOBORESHWA */
         footer { 
             background: #000; 
             color: #fff; 
@@ -256,6 +274,7 @@
             new google.translate.TranslateElement({
                 pageLanguage: 'sw',
                 includedLanguages: 'sw,en,fr,es,zh-CN',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
                 autoDisplay: false
             }, 'google_translate_element');
         }
