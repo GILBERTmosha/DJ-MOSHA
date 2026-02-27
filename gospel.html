@@ -7,34 +7,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --primary: #00bfff; --secondary: #ffd700; }
-        .goog-te-banner-frame.skiptranslate { display: none !important; }
-        body { top: 0px !important; font-family: 'Segoe UI', sans-serif; margin: 0; background: linear-gradient(135deg, #0a0a2a, #16164d); color: #fff; min-height: 100vh; text-align: center; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #0a0a2a; color: #fff; text-align: center; }
         
         .navbar { background: rgba(0, 0, 0, 0.9); padding: 15px; display: flex; justify-content: center; position: sticky; top: 0; border-bottom: 2px solid var(--primary); z-index: 1000; }
-        .navbar a { color: #fff; text-decoration: none; padding: 10px 15px; font-weight: bold; font-size: 13px; text-transform: uppercase; }
+        .navbar a { color: #fff; text-decoration: none; padding: 10px 15px; font-weight: bold; font-size: 13px; }
 
         .header-box { background: var(--primary); padding: 40px 20px; }
 
         /* AD SPACE */
-        .ad-space { background: rgba(255, 255, 255, 0.1); border: 1px dashed var(--secondary); color: #ccc; text-align: center; padding: 15px; margin: 20px auto; width: 90%; max-width: 728px; border-radius: 8px; }
-        .ad-label { display: block; color: var(--secondary); font-size: 10px; margin-bottom: 5px; text-transform: uppercase; }
+        .ad-space { background: rgba(255, 255, 255, 0.1); border: 1px dashed var(--secondary); padding: 10px; margin: 15px auto; width: 90%; max-width: 728px; border-radius: 8px; }
+        .ad-label { display: block; color: var(--secondary); font-size: 10px; text-transform: uppercase; margin-bottom: 5px; }
 
-        /* MUSIC LIST */
-        .container { max-width: 700px; margin: 30px auto; padding: 15px; }
-        .song-card { background: rgba(255, 255, 255, 0.05); border-left: 5px solid var(--secondary); padding: 15px; border-radius: 10px; margin-bottom: 15px; display: flex; align-items: center; text-align: left; }
-        .song-card img { width: 70px; height: 70px; border-radius: 8px; margin-right: 15px; object-fit: cover; }
-        .song-details { flex-grow: 1; }
-        .song-details div { font-weight: bold; font-size: 16px; }
-        .song-details small { color: var(--primary); }
-        .btn-dl { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.3s; }
-        .btn-dl:hover { background: var(--secondary); color: #000; }
+        /* MUSIC SECTION */
+        .container { max-width: 700px; margin: 20px auto; padding: 15px; }
+        .song-card { background: rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 15px; margin-bottom: 25px; border: 1px solid #333; text-align: left; }
+        .song-info { display: flex; align-items: center; margin-bottom: 15px; }
+        .song-info img { width: 60px; height: 60px; border-radius: 8px; margin-right: 15px; object-fit: cover; }
+        .song-title { font-weight: bold; font-size: 18px; color: #fff; }
+        
+        /* PLAYER CONTAINER */
+        .player-box { margin-bottom: 15px; background: #000; border-radius: 10px; overflow: hidden; }
+        
+        .btn-dl { background: var(--secondary); color: #000; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; display: block; text-align: center; font-size: 15px; transition: 0.3s; }
+        .btn-dl:hover { background: #fff; }
 
         footer { background: #000; padding: 30px; border-top: 4px solid var(--primary); margin-top: 50px; }
-        #google_translate_element { display: none; }
     </style>
 </head>
 <body>
-    <div id="google_translate_element"></div>
+
     <nav class="navbar">
         <a href="index.html">Nyumbani</a>
         <a href="singeli.html">Singeli</a>
@@ -44,7 +45,7 @@
 
     <div class="header-box">
         <h1>🙏 GOSPEL MUSIC</h1>
-        <p>Sifa na Kuabudu kupitia DJ Gilbert</p>
+        <p>Sikiliza na Pakua Nyimbo Kali za Sifa kupitia DJ Gilbert</p>
     </div>
 
     <div class="ad-space">
@@ -53,23 +54,25 @@
     </div>
 
     <div class="container">
+        
         <div class="song-card">
-            <img src="https://i.ibb.co/TB85QkjD/images-22.jpg" alt="Neema Gospel Choir">
-            <div class="song-details">
-                <div>Neema Gospel Choir – Temporary</div>
-                <small>Size: 6.5MB | AICT Chang’ombe</small>
+            <div class="song-info">
+                <img src="https://i.ibb.co/TB85QkjD/images-22.jpg" alt="Neema Gospel Choir">
+                <div>
+                    <div class="song-title">Neema Gospel Choir – Temporary</div>
+                    <small style="color: var(--primary);">AICT Chang’ombe | 6.5MB</small>
+                </div>
             </div>
-            <a href="https://www.mediafire.com/file/4w8bgklw2ng15ek/Neema_Gospel_Choir_%25E2%2580%2593_Temporary_%2528AICT_Chang%25E2%2580%2599ombe%2529.mp3/file" class="btn-dl" target="_blank">DOWNLOAD</a>
+
+            <div class="player-box">
+                <iframe src="https://audiomack.com/embed/spiritualspectra/song/temporary-official-audio?background=1" scrolling="no" width="100%" height="252" scrollbars="no" frameborder="0"></iframe>
+            </div>
+
+            <a href="https://www.mediafire.com/file/4w8bgklw2ng15ek/Neema_Gospel_Choir_%25E2%2580%2593_Temporary_%2528AICT_Chang%25E2%2580%2599ombe%2529.mp3/file" class="btn-dl" target="_blank">
+                <i class="fas fa-download"></i> DOWNLOAD MP3 (MEDIAFIRE)
+            </a>
         </div>
 
-        <div class="song-card">
-            <img src="https://via.placeholder.com/70?text=Gospel" alt="Rose Muhando">
-            <div class="song-details">
-                <div>Rose Muhando - Secret Agenda</div>
-                <small>Size: 5.0MB | Gospel Hits</small>
-            </div>
-            <a href="#" class="btn-dl">DOWNLOAD</a>
-        </div>
     </div>
 
     <div class="ad-space">
@@ -81,9 +84,5 @@
         <p>DJ GILBERT GOSPEL &copy; 2026</p>
     </footer>
 
-    <script type="text/javascript">
-        function googleTranslateElementInit() { new google.translate.TranslateElement({pageLanguage: 'sw'}, 'google_translate_element'); }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
