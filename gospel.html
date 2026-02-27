@@ -10,13 +10,24 @@
         .goog-te-banner-frame.skiptranslate { display: none !important; }
         body { top: 0px !important; font-family: 'Segoe UI', sans-serif; margin: 0; background: linear-gradient(135deg, #0a0a2a, #16164d); color: #fff; min-height: 100vh; text-align: center; }
         
-        .navbar { background: rgba(0, 0, 0, 0.9); padding: 15px; display: flex; justify-content: center; position: sticky; top: 0; border-bottom: 2px solid var(--primary); }
+        .navbar { background: rgba(0, 0, 0, 0.9); padding: 15px; display: flex; justify-content: center; position: sticky; top: 0; border-bottom: 2px solid var(--primary); z-index: 1000; }
         .navbar a { color: #fff; text-decoration: none; padding: 10px 15px; font-weight: bold; font-size: 13px; text-transform: uppercase; }
 
         .header-box { background: var(--primary); padding: 40px 20px; }
+
+        /* AD SPACE */
+        .ad-space { background: rgba(255, 255, 255, 0.1); border: 1px dashed var(--secondary); color: #ccc; text-align: center; padding: 15px; margin: 20px auto; width: 90%; max-width: 728px; border-radius: 8px; }
+        .ad-label { display: block; color: var(--secondary); font-size: 10px; margin-bottom: 5px; text-transform: uppercase; }
+
+        /* MUSIC LIST */
         .container { max-width: 700px; margin: 30px auto; padding: 15px; }
-        .song-card { background: rgba(255, 255, 255, 0.05); border-left: 5px solid var(--secondary); padding: 15px; border-radius: 10px; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
-        .btn-dl { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; }
+        .song-card { background: rgba(255, 255, 255, 0.05); border-left: 5px solid var(--secondary); padding: 15px; border-radius: 10px; margin-bottom: 15px; display: flex; align-items: center; text-align: left; }
+        .song-card img { width: 70px; height: 70px; border-radius: 8px; margin-right: 15px; object-fit: cover; }
+        .song-details { flex-grow: 1; }
+        .song-details div { font-weight: bold; font-size: 16px; }
+        .song-details small { color: var(--primary); }
+        .btn-dl { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.3s; }
+        .btn-dl:hover { background: var(--secondary); color: #000; }
 
         footer { background: #000; padding: 30px; border-top: 4px solid var(--primary); margin-top: 50px; }
         #google_translate_element { display: none; }
@@ -36,19 +47,40 @@
         <p>Sifa na Kuabudu kupitia DJ Gilbert</p>
     </div>
 
+    <div class="ad-space">
+        <span class="ad-label">Advertisement</span>
+        <script src="https://pl28804253.effectivegatecpm.com/e4/57/39/e45739237da0714ecd4d5aac755bc5c4.js"></script>
+    </div>
+
     <div class="container">
         <div class="song-card">
-            <div style="text-align: left;">
-                <div style="font-weight: bold;">Rose Muhando - Secret Agenda</div>
-                <small style="color: var(--primary);">Size: 5.0MB</small>
+            <img src="https://i.ibb.co/TB85QkjD/images-22.jpg" alt="Neema Gospel Choir">
+            <div class="song-details">
+                <div>Neema Gospel Choir – Temporary</div>
+                <small>Size: 6.5MB | AICT Chang’ombe</small>
+            </div>
+            <a href="https://www.mediafire.com/file/4w8bgklw2ng15ek/Neema_Gospel_Choir_%25E2%2580%2593_Temporary_%2528AICT_Chang%25E2%2580%2599ombe%2529.mp3/file" class="btn-dl" target="_blank">DOWNLOAD</a>
+        </div>
+
+        <div class="song-card">
+            <img src="https://via.placeholder.com/70?text=Gospel" alt="Rose Muhando">
+            <div class="song-details">
+                <div>Rose Muhando - Secret Agenda</div>
+                <small>Size: 5.0MB | Gospel Hits</small>
             </div>
             <a href="#" class="btn-dl">DOWNLOAD</a>
         </div>
     </div>
 
+    <div class="ad-space">
+        <span class="ad-label">Advertisement</span>
+        <script src="https://pl28804253.effectivegatecpm.com/e4/57/39/e45739237da0714ecd4d5aac755bc5c4.js"></script>
+    </div>
+
     <footer>
-        <p>DJ GILBERT GOSPEL</p>
+        <p>DJ GILBERT GOSPEL &copy; 2026</p>
     </footer>
+
     <script type="text/javascript">
         function googleTranslateElementInit() { new google.translate.TranslateElement({pageLanguage: 'sw'}, 'google_translate_element'); }
     </script>
