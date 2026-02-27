@@ -7,23 +7,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --primary: #8e44ad; --secondary: #ffd700; }
-        .goog-te-banner-frame.skiptranslate { display: none !important; }
-        body { top: 0px !important; font-family: 'Segoe UI', sans-serif; margin: 0; background: #1a1a2e; color: #fff; min-height: 100vh; text-align: center; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #1a1a2e; color: #fff; text-align: center; }
         
-        .navbar { background: rgba(0, 0, 0, 0.9); padding: 15px; display: flex; justify-content: center; position: sticky; top: 0; border-bottom: 2px solid var(--primary); }
+        /* NAVBAR */
+        .navbar { background: rgba(0, 0, 0, 0.9); padding: 15px; display: flex; justify-content: center; position: sticky; top: 0; border-bottom: 2px solid var(--primary); z-index: 1000; }
         .navbar a { color: #fff; text-decoration: none; padding: 10px 15px; font-weight: bold; }
 
+        /* HEADER */
         .header-box { background: var(--primary); padding: 40px 20px; }
-        .container { max-width: 700px; margin: 30px auto; padding: 15px; }
-        .song-card { background: rgba(255, 255, 255, 0.05); border-left: 5px solid var(--primary); padding: 15px; border-radius: 10px; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
-        .btn-dl { background: var(--secondary); color: #000; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; }
+
+        /* AD SPACE */
+        .ad-space { background: #222; border: 1px dashed var(--secondary); color: #666; text-align: center; padding: 15px; margin: 20px auto; width: 90%; max-width: 728px; border-radius: 8px; }
+        .ad-label { display: block; color: var(--secondary); font-size: 10px; margin-bottom: 5px; text-transform: uppercase; }
+
+        /* MUSIC LIST */
+        .music-container { max-width: 700px; margin: 20px auto; padding: 15px; display: flex; flex-direction: column; gap: 15px; }
+        .music-card { background: rgba(255, 255, 255, 0.05); border-radius: 12px; overflow: hidden; display: flex; align-items: center; border: 1px solid #333; padding: 10px; transition: 0.3s; }
+        .music-card:hover { transform: scale(1.02); background: rgba(255, 255, 255, 0.1); }
+        .music-card img { width: 80px; height: 80px; border-radius: 8px; object-fit: cover; }
+        .music-info { margin-left: 15px; flex-grow: 1; text-align: left; }
+        .music-info h3 { font-size: 16px; margin: 0; color: #fff; }
+        .music-info p { font-size: 12px; color: var(--secondary); margin: 5px 0; }
+        .btn-dl { background: var(--secondary); color: #000; padding: 8px 18px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 13px; display: inline-block; }
 
         footer { background: #000; padding: 30px; border-top: 4px solid var(--primary); margin-top: 50px; }
-        #google_translate_element { display: none; }
     </style>
 </head>
 <body>
-    <div id="google_translate_element"></div>
+
     <nav class="navbar">
         <a href="index.html">Nyumbani</a>
         <a href="singeli.html">Singeli</a>
@@ -33,25 +44,42 @@
 
     <div class="header-box">
         <h1>💎 BONGO FLAVA MPYA</h1>
-        <p>Burudika na Bongo Hits kila siku</p>
+        <p>Burudika na Bongo Hits kila siku kupitia DJ GILBERT</p>
     </div>
 
-    <div class="container">
-        <div class="song-card">
-            <div style="text-align: left;">
-                <div style="font-weight: bold;">Diamond Platnumz - Shu!</div>
-                <small style="color: var(--secondary);">Size: 4.8MB</small>
+    <div class="ad-space">
+        <span class="ad-label">Advertisement</span>
+        <script src="https://pl28804253.effectivegatecpm.com/e4/57/39/e45739237da0714ecd4d5aac755bc5c4.js"></script>
+    </div>
+
+    <div class="music-container">
+        <div class="music-card">
+            <img src="https://i1.sndcdn.com/artworks-000650950348-73599u-t500x500.jpg" alt="Cover">
+            <div class="music-info">
+                <h3>Daiman Wa Abadan - Maher Zain</h3>
+                <p>Size: 5.2MB | DJ Gilbert Exclusive</p>
+                <a href="https://audiomack.com/maherzain/song/daiman-wa-abada-3153939" class="btn-dl" target="_blank">DOWNLOAD MP3</a>
             </div>
-            <a href="#" class="btn-dl">DOWNLOAD</a>
+        </div>
+
+        <div class="music-card">
+            <img src="https://via.placeholder.com/80?text=Bongo" alt="Cover">
+            <div class="music-info">
+                <h3>Shu! - Diamond Platnumz</h3>
+                <p>Size: 4.8MB | Bongo Flava</p>
+                <a href="#" class="btn-dl">DOWNLOAD MP3</a>
+            </div>
         </div>
     </div>
 
+    <div class="ad-space">
+        <span class="ad-label">Advertisement</span>
+        <script src="https://pl28804253.effectivegatecpm.com/e4/57/39/e45739237da0714ecd4d5aac755bc5c4.js"></script>
+    </div>
+
     <footer>
-        <p>DJ GILBERT BONGO FLAVA</p>
+        <p>DJ GILBERT MUSIC HUB &copy; 2026</p>
     </footer>
-    <script type="text/javascript">
-        function googleTranslateElementInit() { new google.translate.TranslateElement({pageLanguage: 'sw'}, 'google_translate_element'); }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>
